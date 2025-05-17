@@ -8,8 +8,6 @@ public class PharmacyManager {
         pharmacies = new ArrayList<>();
     }
 
-    //another test
-
     public void addPharmacy(String name, String password) {
         try (PrintWriter writer = new PrintWriter(new FileWriter("pharmacies.txt", true))) {
             writer.println(name + "," + password);
