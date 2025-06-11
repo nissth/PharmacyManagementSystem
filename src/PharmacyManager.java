@@ -42,7 +42,7 @@ public class PharmacyManager {
                 }
 
                 if (!alreadyExists) {
-                    // Create pharmacy with default password (you can modify this)
+                    // Create pharmacy with default password
                     String defaultPassword = "password123";
                     Pharmacy pharmacy = new Pharmacy(pharmacyName, defaultPassword);
                     loadInventory(pharmacy);
