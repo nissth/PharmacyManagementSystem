@@ -6,7 +6,7 @@ public class PharmacyManager {
     private static final String BASE_PATH = "pharmacy/";
     private static final String ACCOUNTS_FILE = "pharmacies.txt";
     public static Pharmacy currentPharmacy;
-    private static final int WARNING_THRESHOLD = 10;
+    private static final int WARNING_THRESHOLD = 5;
 
     public PharmacyManager() {
         pharmacies = new ArrayList<>();

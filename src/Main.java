@@ -108,7 +108,7 @@ public class Main {
         UserScreen();
     }
 
-    public static void dropMedicine() {
+    public static void dropMedicine() { //remove medicine yapıldığında quantity sıfırlanıyor
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n=== REMOVE MEDICINE ===");
 
@@ -117,11 +117,6 @@ public class Main {
             System.out.println("No medicines in inventory!");
             UserScreen();
             return;
-        }
-
-        System.out.println("Current inventory:");
-        for (Map.Entry<String, Integer> entry : PharmacyManager.currentPharmacy.getInventory().entrySet()) {
-            System.out.println("- " + entry.getKey() + ": " + entry.getValue());
         }
 
         System.out.print("\nEnter medicine name to remove: ");

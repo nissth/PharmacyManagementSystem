@@ -1,500 +1,55 @@
-İburamin Zero
-Nurofen
-Zyrtec
-Deltacortril
-Otrivine
-Aferin
-Ventolin
-Majezik
-Sinüs
-Contramal
-Motilium
-Ventolin
-Seroxat
-Cipro
-Gaviscon
-Augmentin
-Biteral
-Nexium
-Dolven
-Glifor
-Minoset
-Dolorex
-Tegretol
-Feramat
-Lansor
-Sab Simplex
-Dolorex
-Talcid
-Dikloron
-Ventolin
-Dolorex
-Cipro
-Monurol
-Talcid
-Asist
-Sab Simplex
-Pantpas
-Augmentin
-Tylolhot
-İburamin Zero
-Nurofen
-Tylolhot
-Sinüs
-İburamin Zero
-Otrivine
-Muscoflex
-İburamin
-Dolven
-Sinüs
-Talcid
-Beloc
-Eferalgan
-Rifampin
-Dolven
-Allegra
-Levopront
-Arveles
-Eferalgan
-Enfluvir
-Nootropil
-Flagyl
-Talcid
-Beloc
-Eferalgan
-Biteral
-Zyrtec
-Muscoflex
-Akineton
-İburamin Zero
-Nootropil
-Parol
-Sinüs
-İburamin
-Zaditen
-Tobrased
-Aferin
-Tegretol
-Flagyl
-Katarin
-Lansor
-Dolorex
-Seroxat
-Zyrtec
-İburamin
-Zaldiar
-Zyrtec
-Levopront
-Tobrased
-Eferalgan
-Zaldiar
-Nootropil
-Nexium
-İburamin Zero
-Nexium
-Lustral
-Tegretol
-Seroxat
-Theraflu
-Theraflu
-Zyrtec
-Akineton
-Otrivine
-Nootropil
-Majezik
-Motilium
-Levopront
-Otrivine
-Pantpas
-Biteral
-Rifampin
-Eferalgan
-Muscoflex
-Biteral
-Beloc
-Muscoflex
-Tobrased
-Nexium
-Zyrtec
-Gaviscon
-Dolorex
-Otrivine
-Ventolin
-Gaviscon
-Beloc
-Cipro
-Asist
-Augmentin
-Nexium
-Allegra
-Gaviscon
-Ventolin
-Allegra
-Biteral
-Lustral
-Enfluvir
-Tegretol
-Enfluvir
-Lansor
-Feramat
-Pantpas
-Allegra
-Aferin
-Tylolhot
-Glifor
-Arveles
-Trileptal
-Minoset
-Deltacortril
-Dolven
-Muscoflex
-Parol
-Talcid
-Muscoflex
-Sinüs
-Flagyl
-Glifor
-Tobrased
-Zaldiar
-Parol
-Nootropil
-Cipro
-Majezik
-Flagyl
-Ventolin
-Trileptal
-Katarin
-Feramat
-Talcid
-Theraflu
-İburamin
-Flagyl
-Tegretol
-Eferalgan
-Lansor
-Neurontin
-Deksalgin
-Rennie
-Deltacortril
-Cipro
-Eferalgan
-Monurol
-Dolorex
-Pantpas
-Flagyl
-Zaldiar
-Zyrtec
-Dikloron
-Aferin
-İburamin Zero
-Rifampin
-Allegra
-Tegretol
-Motilium
-Tobrased
-Augmentin
-Lansor
-Dolorex
-Flagyl
-Allegra
-Theraflu
-Tobrased
-Tobrased
-Dolven
-Flagyl
-Gaviscon
-Theraflu
-Nurofen
-Dikloron
-Minoset
-Neurontin
-Rennie
-Lustral
-Deksalgin
-Nexium
-Sab Simplex
-Minoset
-Pantpas
-Dekort
-Aferin
-Pantpas
-Muscoflex
-Zaldiar
-Seroxat
-Nootropil
-Deltacortril
-Enfluvir
-Tylolhot
-Gaviscon
-Flagyl
-Biteral
-Zaditen
-Zaditen
-Levopront
-Rifampin
-Aferin
-Deksalgin
-Contramal
-Monurol
-Sinüs
-Rifampin
-Allegra
-Asist
-Neurontin
-Gaviscon
-Katarin
-Deltacortril
-Seroxat
-Sinüs
-Asist
-Nurofen
-Nurofen
-Zaditen
-Enfluvir
-Feramat
-Otrivine
-Ventolin
-Nexium
-Levopront
-Dolven
-Zyrtec
-Dekort
-Muscoflex
-Parol
-Flagyl
-İburamin Zero
-Rifampin
-Flagyl
-Dekort
-Zaditen
-Akineton
-Enfluvir
-Allegra
-Cipro
-Biteral
-Seroxat
-Deltacortril
-Otrivine
-Flagyl
-Gaviscon
-Rennie
-Dekort
-Seroxat
-Theraflu
-Augmentin
-Talcid
-Zyrtec
-Dekort
-İburamin Zero
-Rifampin
-Nootropil
-Nootropil
-Neurontin
-Enfluvir
-Contramal
-Eferalgan
-Biteral
-Muscoflex
-Dolven
-Flagyl
-Biteral
-Biteral
-Rennie
-Nexium
-Akineton
-Asist
-Enfluvir
-Deksalgin
-Allegra
-Zaldiar
-Pantpas
-Minoset
-Arveles
-Tegretol
-Dekort
-Theraflu
-Nexium
-Contramal
-Motilium
-Lansor
-Katarin
-Lustral
-Feramat
-Biteral
-Parol
-Contramal
-Feramat
-Ventolin
-Lustral
-Dolven
-Muscoflex
-Neurontin
-Tegretol
-Deksalgin
-Talcid
-Sinüs
-Eferalgan
-Monurol
-Lustral
-Sab Simplex
-Deksalgin
-Nootropil
-Parol
-Feramat
-Sab Simplex
-Majezik
-Katarin
-Sab Simplex
-Levopront
-Dolven
-İburamin Zero
-Monurol
-Lansor
-Augmentin
-Neurontin
-Majezik
-Otrivine
-Contramal
-Trileptal
-Aferin
-Zaditen
-Deltacortril
-Aferin
-Otrivine
-Gaviscon
-Monurol
-Akineton
-Biteral
-Dekort
-Dekort
-Motilium
-Pantpas
-Dolven
-Katarin
-Theraflu
-Dikloron
-Minoset
-Eferalgan
-Monurol
-Feramat
-Asist
-Minoset
-İburamin
-Deltacortril
-Nootropil
-Eferalgan
-Katarin
-Zyrtec
-Dolorex
-Deltacortril
-Dolorex
-Biteral
-Arveles
-Katarin
-Beloc
-Pantpas
-Sinüs
-Glifor
-Majezik
-Dikloron
-Neurontin
-Deltacortril
-Biteral
-Tegretol
-Tobrased
-Otrivine
-Beloc
-Zyrtec
-Nootropil
-Muscoflex
-Augmentin
-Enfluvir
-Katarin
-Dekort
-Eferalgan
-Pantpas
-Otrivine
-Dolven
-Enfluvir
-Katarin
-Dekort
-Otrivine
-Katarin
-İburamin Zero
-Dolorex
-Nexium
-Muscoflex
-Seroxat
-Gaviscon
-Tegretol
-Levopront
-Cipro
-Eferalgan
-Sinüs
-Ventolin
-İburamin
-Theraflu
-Monurol
-Enfluvir
-Arveles
-Muscoflex
-Zaditen
-Akineton
-Dikloron
-Enfluvir
-Flagyl
-Sab Simplex
-Zyrtec
-Parol
-Aferin
-Rennie
-Pantpas
-Arveles
-Majezik
-Cipro
-Zaditen
-Feramat
-Muscoflex
-Katarin
-Rennie
-İburamin Zero
-Katarin
-Aferin
-Seroxat
-Nurofen
-Aferin
-Beloc
-Nurofen
-Rennie
-Nurofen
-Akineton
-Tegretol
-Nootropil
-Feramat
-Sab Simplex
-Tobrased
-Deksalgin
-Katarin
-Dolven
-Rifampin
-Muscoflex
-Tobrased
-Minoset
-Allegra
-Levopront
-Gaviscon
-Otrivine
-Arveles
-Nootropil
-Feramat
-Cipro
-Nootropil
-Tegretol
-Tylolhot
-Gaviscon
-Talcid
-Dolven
-Augmentin
-Talcid
-Muscoflex
-Levopront
+Aferin, 16
+Akineton, 7
+Allegra, 13
+Arveles, 8
+Asist, 6
+Augmentin, 9
+Beloc, 7
+Biteral, 17
+Cipro, 10
+Contramal, 5
+Dekort, 14
+Deksalgin, 6
+Deltacortril, 10
+Dikloron, 4
+Dolorex, 9
+Dolven, 15
+Eferalgan, 17
+Enfluvir, 14
+Feramat, 13
+Flagyl, 16
+Gaviscon, 14
+Glifor, 3
+İburamin, 5
+İburamin Zero, 13
+Katarin, 19
+Lansor, 8
+Levopront, 13
+Lustral, 6
+Majezik, 6
+Minoset, 6
+Monurol, 7
+Motilium, 4
+Muscoflex, 17
+Neurontin, 8
+Nexium, 10
+Nootropil, 17
+Nurofen, 9
+Otrivine, 13
+Pantpas, 13
+Parol, 8
+Rennie, 7
+Rifampin, 8
+Sab Simplex, 8
+Seroxat, 10
+Sinüs, 9
+Talcid, 10
+Tegretol, 11
+Theraflu, 10
+Tobrased, 11
+Trileptal, 3
+Tylolhot, 4
+Ventolin, 9
+Zaditen, 8
+Zaldiar, 5
+Zyrtec, 14
