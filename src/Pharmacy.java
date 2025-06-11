@@ -43,20 +43,23 @@ public class Pharmacy {
         if (medName == null || medName.trim().isEmpty()) {
             throw new IllegalArgumentException("Medicine name cannot be null or empty");
         }
-        if (quantity < 0) {
-            throw new IllegalArgumentException("Quantity cannot be negative");
+        if (quantity <= 0) {
+            throw new IllegalArgumentException("Quantity must be positive");
         }
 
         String cleanName = medName.trim().toLowerCase();
         if (inventory.containsKey(cleanName)) {
             int current = inventory.get(cleanName);
-            int newQuantity = Math.max(0, current - quantity);
-            inventory.put(cleanName, newQuantity);
+            int actualDropped = Math.min(quantity, current); // Only drop what's available
+            int newQuantity = current - actualDropped;
 
-            // Remove medicine from inventory if quantity becomes 0
             if (newQuantity == 0) {
                 inventory.remove(cleanName);
+            } else {
+                inventory.put(cleanName, newQuantity);
             }
+
+            System.out.println("Dropped " + actualDropped + " of " + medName);
         } else {
             System.out.println("Warning: Medicine '" + medName + "' not found in inventory");
         }
