@@ -2,26 +2,20 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
-
     static boolean quit = false;
     private static PharmacyManager manager = new PharmacyManager();
-
     public static void main(String[] args) {
-        clearConsole();
-        System.out.println("🏥 Welcome to Pharmacy Management System!");
-        System.out.println("Loading existing pharmacy data...\n");
-
         while(!quit) {
             StartScreen();
         }
     }
-
     public static void SignUp(){
         Scanner scanner = new Scanner(System.in);
         clearConsole();
 
-        System.out.println("\n=== PHARMACY REGISTRATION ===");
-        System.out.print("Enter pharmacy name (or press Enter for auto-generated name): ");
+        System.out.println("=== PHARMACY REGISTRATION ===");
+        System.out.println("Enter pharmacy name");
+        System.out.print("(press Enter for auto-generated name): ");
         String name = scanner.nextLine().trim();
 
         if (name.isEmpty()) {
@@ -37,21 +31,14 @@ public class Main {
             SignUp();
             return;
         }
-
         manager.addPharmacy(name, password);
-        System.out.println("✅ Pharmacy signed up successfully!");
-        System.out.println("You are now logged in as: " + name);
         UserScreen();
     }
-
     public static void LogIn(){
         while(true) {
             Scanner scanner = new Scanner(System.in);
             clearConsole();
-
             System.out.println("\n=== PHARMACY LOGIN ===");
-
-            // Show available pharmacies
             manager.displayAllPharmacies();
 
             System.out.print("Pharmacy Name: ");
@@ -62,7 +49,7 @@ public class Main {
             boolean exist = manager.checkPharmacy(name, password);
             if (exist) {
                 System.out.println("✅ Login successful!");
-                System.out.println("Welcome back, " + name + "!");
+                System.out.println("Welcome back, " + name);
                 UserScreen();
                 break;
             } else {
@@ -75,7 +62,6 @@ public class Main {
             }
         }
     }
-
     public static void addMedicine() {
         Scanner scanner = new Scanner(System.in);
         clearConsole();
@@ -103,21 +89,19 @@ public class Main {
             System.out.println("✅ Medicine '" + name + "' added successfully!");
             System.out.println("New quantity: " + PharmacyManager.currentPharmacy.getQuantity(name));
         } catch (Exception e) {
-            System.out.println("❌ Invalid quantity. Please enter a valid number.");
-            scanner.nextLine(); // consume invalid input
+            System.out.println("❌ Invalid entry. Please enter a valid number.");
+            scanner.nextLine();
             addMedicine();
             return;
         }
 
         UserScreen();
     }
-
-    public static void dropMedicine() { //remove medicine yapıldığında quantity sıfırlanıyor
+    public static void dropMedicine() {
         Scanner scanner = new Scanner(System.in);
         clearConsole();
-        System.out.println("\n=== REMOVE MEDICINE ===");
+        System.out.println("=== REMOVE MEDICINE ===");
 
-        // Show current inventory
         if (PharmacyManager.currentPharmacy.getInventory().isEmpty()) {
             System.out.println("No medicines in inventory!");
             UserScreen();
@@ -128,7 +112,7 @@ public class Main {
         String name = scanner.nextLine().trim();
 
         if (!PharmacyManager.currentPharmacy.getInventory().containsKey(name)) {
-            System.out.println("❌ Medicine '" + name + "' not found in inventory!");
+            System.out.println("❌ Medicine '" + name + "' not found in the inventory!");
             UserScreen();
             return;
         }
@@ -140,7 +124,7 @@ public class Main {
         try {
             int quantity = scanner.nextInt();
             if (quantity < 0) {
-                System.out.println("Quantity cannot be negative!");
+                System.out.println("Quantity can't be negative!");
                 dropMedicine();
                 return;
             }
@@ -153,27 +137,26 @@ public class Main {
             System.out.println("New quantity: " + newQuantity);
 
             if (newQuantity < manager.getWarningThreshold()) {
-                System.out.println("⚠️  WARNING: '" + name + "' is now below threshold (" + manager.getWarningThreshold() + ")!");
+                System.out.println("⚠️  WARNING: '" + name + "' is below threshold (" + manager.getWarningThreshold() + ")!");
             }
 
         } catch (Exception e) {
-            System.out.println("❌ Invalid quantity. Please enter a valid number.");
-            scanner.nextLine(); // consume invalid input
+            System.out.println("❌ Invalid entry. Please enter a valid number.");
+            scanner.nextLine();
             dropMedicine();
             return;
         }
 
         UserScreen();
     }
-
     public static void countMedicine() {
         clearConsole();
-        System.out.println("\n=== INVENTORY COUNT ===");
+        System.out.println("=== INVENTORY COUNT ===");
 
         if (PharmacyManager.currentPharmacy.getInventory().isEmpty()) {
-            System.out.println("No medicines in inventory!");
+            System.out.println("No medicines in the inventory!");
         } else {
-            System.out.println("Current inventory for " + PharmacyManager.currentPharmacy.getName() + ":");
+            System.out.println("Current inventory of " + PharmacyManager.currentPharmacy.getName() + ":");
             System.out.println("----------------------------------------");
 
             int totalMedicines = 0;
@@ -183,20 +166,18 @@ public class Main {
                 totalMedicines += entry.getValue();
             }
             System.out.println("----------------------------------------");
-            System.out.println("Total medicines: " + totalMedicines);
+            System.out.println("Total medicines in the inventory: " + totalMedicines);
         }
-
         UserScreen();
     }
-
     public static void warning() {
         clearConsole();
-        manager.reloadAllInventories(); // Refresh data from all pharmacies
+        manager.reloadAllInventories();
         manager.checkSwapWarning();
         UserScreen();
     }
-
     public static void StartScreen(){
+        clearConsole();
         System.out.println("=========================================");
         System.out.println("🏥 PHARMACY MANAGEMENT SYSTEM");
         System.out.println("=========================================");
@@ -224,13 +205,11 @@ public class Main {
             }
         } catch (Exception e) {
             System.out.println("❌ Invalid input! Please enter a number.");
-            inp.nextLine(); // consume invalid input
+            inp.nextLine();
             StartScreen();
         }
     }
-
     public static void UserScreen(){
-        clearConsole();
         System.out.println("\n=========================================");
         System.out.println("🏥 WELCOME " + PharmacyManager.currentPharmacy.getName().toUpperCase());
         System.out.println("=========================================");
@@ -261,7 +240,7 @@ public class Main {
             }
         } catch (Exception e) {
             System.out.println("❌ Invalid input! Please enter a number.");
-            inp.nextLine(); // consume invalid input
+            inp.nextLine();
             UserScreen();
         }
     }

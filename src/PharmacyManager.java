@@ -7,55 +7,15 @@ public class PharmacyManager {
     private static final String ACCOUNTS_FILE = "pharmacies.txt";
     public static Pharmacy currentPharmacy;
     private static final int WARNING_THRESHOLD = 5;
-
     public PharmacyManager() {
         pharmacies = new ArrayList<>();
         createDirectoryIfNotExists();
         loadPharmacyAccounts();
-        loadExistingPharmacyFiles();
     }
-
     private void createDirectoryIfNotExists() {
         File dir = new File(BASE_PATH);
         if (!dir.exists()) {
             dir.mkdirs();
-        }
-    }
-
-    // Load existing pharmacy files (pharmacy1.txt, pharmacy2.txt, etc.)
-    private void loadExistingPharmacyFiles() {
-        File dir = new File(BASE_PATH);
-        File[] files = dir.listFiles((d, name) -> name.startsWith("pharmacy") && name.endsWith(".txt"));
-
-        if (files != null) {
-            for (File file : files) {
-                String fileName = file.getName();
-                String pharmacyName = fileName.substring(0, fileName.lastIndexOf('.'));
-
-                // Check if this pharmacy is already loaded from accounts file
-                boolean alreadyExists = false;
-                for (Pharmacy p : pharmacies) {
-                    if (p.getName().equals(pharmacyName)) {
-                        alreadyExists = true;
-                        break;
-                    }
-                }
-
-                if (!alreadyExists) {
-                    // Create pharmacy with default password
-                    String defaultPassword = "password123";
-                    Pharmacy pharmacy = new Pharmacy(pharmacyName, defaultPassword);
-                    loadInventory(pharmacy);
-                    pharmacies.add(pharmacy);
-
-                    // Add to accounts file
-                    try (PrintWriter writer = new PrintWriter(new FileWriter(ACCOUNTS_FILE, true))) {
-                        writer.println(pharmacyName + "," + defaultPassword);
-                    } catch (IOException e) {
-                        System.out.println("Error writing to accounts file: " + e.getMessage());
-                    }
-                }
-            }
         }
     }
 
@@ -72,7 +32,7 @@ public class PharmacyManager {
             writer.println(name + "," + password);
             Pharmacy newPharmacy = new Pharmacy(name, password);
             pharmacies.add(newPharmacy);
-            saveInventory(newPharmacy); // create empty inventory file
+            saveInventory(newPharmacy);
             currentPharmacy = newPharmacy;
             System.out.println("Pharmacy '" + name + "' created successfully!");
         } catch (IOException e) {
@@ -104,7 +64,7 @@ public class PharmacyManager {
                 }
             }
         } catch (IOException e) {
-            System.out.println("No pharmacy accounts found. Starting fresh.");
+            System.out.println("No pharmacy accounts found.");
         }
     }
 
