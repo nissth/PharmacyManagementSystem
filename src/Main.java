@@ -7,6 +7,7 @@ public class Main {
     private static PharmacyManager manager = new PharmacyManager();
 
     public static void main(String[] args) {
+        clearConsole();
         System.out.println("🏥 Welcome to Pharmacy Management System!");
         System.out.println("Loading existing pharmacy data...\n");
 
@@ -17,6 +18,7 @@ public class Main {
 
     public static void SignUp(){
         Scanner scanner = new Scanner(System.in);
+        clearConsole();
 
         System.out.println("\n=== PHARMACY REGISTRATION ===");
         System.out.print("Enter pharmacy name (or press Enter for auto-generated name): ");
@@ -45,6 +47,7 @@ public class Main {
     public static void LogIn(){
         while(true) {
             Scanner scanner = new Scanner(System.in);
+            clearConsole();
 
             System.out.println("\n=== PHARMACY LOGIN ===");
 
@@ -75,6 +78,7 @@ public class Main {
 
     public static void addMedicine() {
         Scanner scanner = new Scanner(System.in);
+        clearConsole();
         System.out.println("\n=== ADD MEDICINE ===");
         System.out.print("Enter medicine name: ");
         String name = scanner.nextLine().trim();
@@ -110,6 +114,7 @@ public class Main {
 
     public static void dropMedicine() { //remove medicine yapıldığında quantity sıfırlanıyor
         Scanner scanner = new Scanner(System.in);
+        clearConsole();
         System.out.println("\n=== REMOVE MEDICINE ===");
 
         // Show current inventory
@@ -162,6 +167,7 @@ public class Main {
     }
 
     public static void countMedicine() {
+        clearConsole();
         System.out.println("\n=== INVENTORY COUNT ===");
 
         if (PharmacyManager.currentPharmacy.getInventory().isEmpty()) {
@@ -184,6 +190,7 @@ public class Main {
     }
 
     public static void warning() {
+        clearConsole();
         manager.reloadAllInventories(); // Refresh data from all pharmacies
         manager.checkSwapWarning();
         UserScreen();
@@ -202,6 +209,7 @@ public class Main {
         Scanner inp = new Scanner(System.in);
         try {
             int operation = inp.nextInt();
+            clearConsole();
             switch (operation){
                 case 1: SignUp(); break;
                 case 2: LogIn(); break;
@@ -222,6 +230,7 @@ public class Main {
     }
 
     public static void UserScreen(){
+        clearConsole();
         System.out.println("\n=========================================");
         System.out.println("🏥 WELCOME " + PharmacyManager.currentPharmacy.getName().toUpperCase());
         System.out.println("=========================================");
@@ -254,6 +263,11 @@ public class Main {
             System.out.println("❌ Invalid input! Please enter a number.");
             inp.nextLine(); // consume invalid input
             UserScreen();
+        }
+    }
+    public static void clearConsole(){
+        for (int i = 0; i < 64; i++) {
+            System.out.println();
         }
     }
 }

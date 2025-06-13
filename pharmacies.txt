@@ -5,3 +5,4 @@ pharmacy_2,password123
 pharmacy_3,password123
 pharmacy_4,password123
 pharmacy_5,password123
+Karam,karam123

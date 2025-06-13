@@ -1,1 +1,2 @@
-dolorex,3
+parol,3
+otrivine,5

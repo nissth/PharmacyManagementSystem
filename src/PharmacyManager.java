@@ -222,7 +222,7 @@ public class PharmacyManager {
 
                 int quantity = pharmacy.getQuantity(medicineName);
                 if (quantity > WARNING_THRESHOLD) {
-                    availablePharmacies.add(pharmacy.getName() + " (has " + quantity + " units)");
+                    availablePharmacies.add(pharmacy.getName());
                 }
             }
         }
