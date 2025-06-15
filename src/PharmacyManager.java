@@ -20,7 +20,7 @@ public class PharmacyManager {
     }
 
     public void addPharmacy(String name, String password) {
-        // Check if pharmacy already exists
+        // Check if pharmacy already exists or not
         for (Pharmacy p : pharmacies) {
             if (p.getName().equals(name)) {
                 System.out.println("Pharmacy with this name already exists!");
@@ -28,6 +28,7 @@ public class PharmacyManager {
             }
         }
 
+        // Keep the personal infos of the pharmacies in a file
         try (PrintWriter writer = new PrintWriter(new FileWriter(ACCOUNTS_FILE, true))) {
             writer.println(name + "," + password);
             Pharmacy newPharmacy = new Pharmacy(name, password);
@@ -35,7 +36,8 @@ public class PharmacyManager {
             saveInventory(newPharmacy);
             currentPharmacy = newPharmacy;
             System.out.println("Pharmacy '" + name + "' created successfully!");
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             System.out.println("Error writing to file: " + e.getMessage());
         }
     }
@@ -110,26 +112,26 @@ public class PharmacyManager {
         }
     }
 
-    // Generate next available pharmacy name (pharmacy6, pharmacy7, etc.)
+    // Generate next available pharmacy name
     public String generateNextPharmacyName() {
-        int counter = 1;
-        String baseName = "pharmacy";
+        int ctr = 1;
+        String base = "pharmacy";
 
         while (true) {
-            String candidateName = baseName + counter;
+            String newName = base + ctr;
             boolean exists = false;
 
             for (Pharmacy p : pharmacies) {
-                if (p.getName().equals(candidateName)) {
+                if (p.getName().equals(newName)) {
                     exists = true;
                     break;
                 }
             }
 
             if (!exists) {
-                return candidateName;
+                return newName;
             }
-            counter++;
+            ctr++;
         }
     }
 
@@ -151,15 +153,16 @@ public class PharmacyManager {
                 hasWarnings = true;
                 System.out.println("⚠️  LOW STOCK: " + medicineName + " - only " + quantity + " left!");
 
-                // Check other pharmacies for this medicine
+                // Check the other pharmacies for this medicine
                 List<String> availablePharmacies = findMedicineInOtherPharmacies(medicineName);
 
                 if (!availablePharmacies.isEmpty()) {
-                    System.out.println("   💡 SWAP SUGGESTION: This medicine is available in:");
+                    System.out.println("   💡 This medicine is available in:");
                     for (String pharmacyInfo : availablePharmacies) {
                         System.out.println("      - " + pharmacyInfo);
                     }
-                } else {
+                }
+                else {
                     System.out.println("   ❌ This medicine is not available in other pharmacies.");
                 }
                 System.out.println();
@@ -167,7 +170,7 @@ public class PharmacyManager {
         }
 
         if (!hasWarnings) {
-            System.out.println("✅ All medicines are above the warning threshold!");
+            System.out.println("✅ All medicines are above the threshold!");
         }
     }
 
@@ -190,7 +193,6 @@ public class PharmacyManager {
         return availablePharmacies;
     }
 
-    // Get all pharmacy names for display
     public void displayAllPharmacies() {
         System.out.println("\n=== ALL REGISTERED PHARMACIES ===");
         if (pharmacies.isEmpty()) {
@@ -203,7 +205,7 @@ public class PharmacyManager {
         System.out.println();
     }
 
-    // Reload all inventories to get fresh data
+    // Reload all inventories to get up-to-date data
     public void reloadAllInventories() {
         for (Pharmacy pharmacy : pharmacies) {
             loadInventory(pharmacy);
